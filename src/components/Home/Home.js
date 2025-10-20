@@ -50,16 +50,6 @@ function Home() {
       </Container>
       <Home2 />
 
-      <Container>
-        <Row style={{ paddingTop: "50px", paddingBottom: "80px" }}>
-          <Col md={12} className="home-about-social">
-            <h1>View Student Projects</h1>
-            <p>
-              Learn more about Yama-Ichi and <span className="purple">view student projects </span>
-            </p>
-          </Col>
-        </Row>
-      </Container>
     </section>
   );
 }

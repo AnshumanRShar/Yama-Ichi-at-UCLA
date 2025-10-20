@@ -8,11 +8,12 @@ function Type() {
         strings: [
           "An internet you can touch, smell, and haggle with.",
           "EDA room at Broad",
-          "Nov 31st, 2025",
+          "Oct 22nd, 2025",
         ],
         autoStart: true,
         loop: true,
-        deleteSpeed: 100,
+        delay: 30, // typing delay in ms (lower = faster)
+        deleteSpeed: 30, // deletion speed in ms
       }}
     />
   );
