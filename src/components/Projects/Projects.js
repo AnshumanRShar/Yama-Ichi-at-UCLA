@@ -21,63 +21,50 @@ function Projects() {
           Short description...
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={chatify}
-              isBlog={false}
-              title="Chatify"
-              description="Short Description/Artist's statement summarized"
-            />
-          </Col>
+          {(() => {
+            const titles = [
+              "Roma",
+              "Irene",
+              "Airis",
+              "Ash",
+              "Yuri",
+              "Ellery",
+              "Yulissa",
+              "Christine",
+              "Sana",
+              "Rafael",
+              "Calvin",
+              "Darcy",
+              "Arya",
+              "Dar",
+              "Ella",
+              "Reese",
+              "Anshuman",
+              "Jiayi",
+              "Kasie",
+              "Elisa",
+            ];
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="Short Description/Artist's statement summarized"
-            />
-          </Col>
+            const images = [
+              chatify,
+              bitsOfCode,
+              editor,
+              leaf,
+              suicide,
+              emotion,
+            ];
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={editor}
-              isBlog={false}
-              title="Editor.io"
-              description="Short Description/Artist's statement summarized"
-               
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Short Description/Artist's statement summarized"
-              
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Short Description/Artist's statement summarized"
-             
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-                            description="Short Description/Artist's statement summarized"
-
-            />
-          </Col>
+            return titles.map((t, idx) => (
+              <Col key={t} md={4} className="project-card">
+                <ProjectCard
+                  imgPath={images[idx % images.length]}
+                  isBlog={false}
+                  title={t}
+                  description="Short Description/Artist's statement summarized"
+                />
+              </Col>
+            ));
+          })()}
         </Row>
       </Container>
     </Container>

@@ -4,6 +4,28 @@ import myImg from "../../Assets/avatar.avif";
 import Tilt from "react-parallax-tilt";
 
 function Home2() {
+  const students = [
+    "Roma",
+    "Irene",
+    "Airis",
+    "Ash",
+    "Yuri",
+    "Ellery",
+    "Yulissa",
+    "Christine",
+    "Sana",
+    "Rafael",
+    "Calvin",
+    "Darcy",
+    "Arya",
+    "Dar",
+    "Ella",
+    "Reese",
+    "Anshuman",
+    "Jiayi",
+    "Kasie",
+    "Elisa",
+  ];
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -24,14 +46,14 @@ After the first event started in 2012, it has been spreading to 12 cities in the
               <br />
               <br />
               <i>
-                <b className="purple">
+                <b className="blue">
                   {" "}
                 </b>
               </i>
               <br />
               <br />
               <i>
-                <b className="purple">
+                <b className="blue">
                   {" "}
                 </b>
               </i>
@@ -43,6 +65,16 @@ After the first event started in 2012, it has been spreading to 12 cities in the
             <Tilt>
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
+            <div
+              className="student-names"
+              style={{ marginTop: "1rem", textAlign: "center", color: "white" }}
+            >
+              {students.map((s) => (
+                <div key={s} style={{ fontWeight: 500, lineHeight: 1.4 }}>
+                  {s}
+                </div>
+              ))}
+            </div>
           </Col>
         </Row>
       </Container>

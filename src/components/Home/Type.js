@@ -7,8 +7,7 @@ function Type() {
       options={{
         strings: [
           "An internet you can touch, smell, and haggle with.",
-          "EDA room at Broad",
-          "Oct 22nd, 2025",
+          "The Internet Yami-Ichi is a flea market-style event where people deal with “Internet-ish” items in real space. It was started in Tokyo in 2012.",
         ],
         autoStart: true,
         loop: true,
